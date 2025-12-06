@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="header-container">
+      <div class="header">
+        <div class="header-play-timer">
+          <button id="again-button" class="btn btn-again">Play Again!</button>
+          <div class="header-heading">
+            <h1>Memory Game</h1>
+            <h2 class="header-heading-quote">
+              Your brain is stronger than you think!"
+            </h2>
+          </div>
+          <div class="header-flex-container">
+            <div class="heading-flex">
+              <div class="heading-flex-label">Timer</div>
+              <div id="heading-flex-value" class="heading-flex-value">0:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="game-cards-container">
+      <div id="game-grid" class="play-cards"></div>
+    </section>
+  </body>
+</html>

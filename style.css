@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: "Patrick Hand", cursive;
+}
+body {
+  background-color: rgb(174, 218, 218);
+}
+.hidden {
+  visibility: hidden;
+}
+.header-heading {
+  text-align: center;
+}
+.header-heading-quote {
+  color: rgb(234, 237, 90);
+  font-size: 3.5rem;
+  letter-spacing: 0.2rem;
+}
+.header-container {
+  width: 100%;
+  /* background-color: rgb(42, 42, 83); */
+  background-color: rgb(66, 112, 108);
+  height: 20%;
+  color: rgb(174, 218, 218);
+}
+.header {
+  padding: 2rem;
+}
+.header h1 {
+  text-align: center;
+  font-size: 6rem;
+}
+.header .btn {
+  background: rgb(199, 228, 174);
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  font-family: "Patrick Hand", cursive;
+  transition: all 0.3s ease;
+  border: 0.5rem solid rgb(12, 116, 116);
+  box-shadow: 0 0.3rem 0 rgb(0, 0, 0, 0.7);
+  /* box-shadow: 0.2rem 0.4rem 0 rgb(84, 142, 142); */
+}
+.header .btn:hover {
+  cursor: pointer;
+  background-color: rgb(162, 224, 224);
+  transform: translateY(-0.3rem);
+  box-shadow: 0.1rem 0.4rem 0 rgb(0, 0, 0, 0.7);
+}
+.header-play-timer {
+  display: flex;
+  width: 95%;
+  margin: 1rem auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-flex-container {
+  width: 10%;
+}
+.heading-flex {
+  text-align: center;
+  border: 0.5rem solid rgb(12, 116, 116);
+  box-shadow: 0 0.3rem 0 rgb(0, 0, 0, 0.7);
+  /* border: 8px solid rgb(115, 168, 8); */
+  border-radius: 2rem;
+  background-color: rgb(199, 228, 174);
+  color: rgb(42, 42, 83);
+}
+.heading-flex-label {
+  font-size: 2.5rem;
+}
+.heading-flex-value {
+  font-size: 2.5rem;
+}
+.play-cards-container {
+  width: 100%;
+}
+
+.bg-color {
+  color: rgb(199, 228, 174);
+  font-size: 5rem;
+}
+.bg-color:hover {
+  color: rgb(42, 42, 83);
+}
+/* .cards-common {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+} */
+.game-cards-container {
+  width: 90%;
+  margin: 3rem auto;
+}
+#game-grid > div {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  transform-style: preserve-3d;
+}
+.play-cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+  width: 50%;
+  margin: 3rem auto;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  perspective: 200rem;
+  -moz-perspective: 200rem;
+}
+.play-cards-back,
+.play-cards-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.8s ease;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-cards-back {
+  background-color: rgb(231, 231, 245);
+  border: 0.5rem solid rgb(12, 116, 116);
+  box-shadow: 0 0.3rem 0 rgb(0, 0, 0, 0.7);
+  font-size: 4rem;
+  color: rgb(182, 10, 59);
+  backface-visibility: hidden;
+}
+
+.play-cards-front {
+  background-color: rgb(199, 228, 174);
+  border: 0.5rem solid rgb(12, 116, 116);
+  box-shadow: 0 0.3rem 0 rgb(0, 0, 0, 0.7);
+
+  backface-visibility: hidden;
+}
+.heart-class {
+  font-size: 3rem;
+  color: rgb(225, 142, 192);
+}
+
+.back-rotate-initial {
+  transform: rotateY(180deg);
+}
+.front-rotate-after {
+  transform: rotateY(-180deg);
+}
+.back-rotate-after {
+  transform: rotateY(0deg);
+}
+.card-animation {
+  animation: dance 1s linear infinite 500ms;
+}
+
+@media (min-width: 768px) {
+  .play-cards {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 540px) {
+  .play-cards {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .play-cards {
+    width: 40%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .play-cards {
+    width: 95%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  #game-grid > div {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .play-cards-back,
+  .play-cards-front {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .play-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .header-play-timer {
+    flex-direction: column;
+  }
+  .heading-flex {
+    width: 30vw;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 4rem;
+  }
+
+  .header .btn {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+}

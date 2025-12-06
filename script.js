@@ -125,8 +125,6 @@ function displayCards() {
     newCardFront.classList.add(Curr.id);
     newCardFront.classList.add("play-cards-front");
     newCardFront.classList.add("cards-common");
-    //    newCardFront.classList.add("front-rotate-initial");
-
     newCardFront.classList.add("heart-class");
 
     newCardBack.setAttribute("id", "back_" + index + "_" + Curr.id);
